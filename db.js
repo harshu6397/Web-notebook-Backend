@@ -1,3 +1,5 @@
+require('dotenv').config({}); 
+
 // Import Mongoose package  
 const mongoose = require('mongoose');
 
