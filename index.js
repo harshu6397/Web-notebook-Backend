@@ -14,7 +14,7 @@ connectToMongo();
 // creating a new express app
 const app = express()
 console.log(process.env)
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 5000
 
 // Middleware
 app.use(cors())
@@ -22,7 +22,7 @@ app.use(express.json())
 
 // Available routes
 app.use('/api/auth', require('./routes/auth'))
-app.use('/api/notes', require('./routes/notes'))
+app.use('/api/notes', require('./routes/notes')) 
 
 // Home route
 app.get('/', (req, res) => {

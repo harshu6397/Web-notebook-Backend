@@ -4,7 +4,8 @@ require('dotenv').config({});
 const mongoose = require('mongoose');
 
 // MongoDB URL
-const mongoURL = process.env.MONGO_URL;
+// const mongoURL = process.env.MONGO_URL;
+const mongoURL = "mongodb+srv://Harshu:test@cluster0.msyevpe.mongodb.net/web-notebook?retryWrites=true&w=majority";
 
 // Connect to MongoDB
 const connectToMongo = () => {
