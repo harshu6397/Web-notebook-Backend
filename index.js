@@ -13,7 +13,6 @@ connectToMongo();
  
 // creating a new express app
 const app = express()
-console.log(process.env)
 const port = process.env.PORT || 5000
 
 // Middleware

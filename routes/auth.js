@@ -22,7 +22,6 @@ router.post('/createuser', [
     body('passwordConfirmation'),
 
 ], async (req, res) => {
-    console.log(req.body);
 
     // Get the validation result
     const errors = validationResult(req);
@@ -42,7 +41,6 @@ router.post('/createuser', [
         const securedPassword = await bcrypt.hash(req.body.password, salt);
 
         // Create a new User
-        console.log(req.body.cpassword);
         if (req.body.password === req.body.cpassword) {
             user = await User.create({
                 name: req.body.name,
@@ -56,7 +54,6 @@ router.post('/createuser', [
                 }
             }
             const authToken = jwt.sign(data, JWT_SECRET);
-            console.log(authToken);
             res.json({ status: true, authToken });
             // res.send(user);
         }
@@ -100,7 +97,6 @@ router.post('/login', [
             }
         }
         const authToken = jwt.sign(data, JWT_SECRET);
-        console.log(authToken);
         res.json({ status: true, authToken });
     }
     catch (error) {
