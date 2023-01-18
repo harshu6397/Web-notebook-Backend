@@ -13,7 +13,7 @@ connectToMongo();
  
 // creating a new express app
 const app = express()
-const port = process.env.PORT || 5000
+const port = 8000 || 5000
 
 // Middleware
 app.use(cors())
