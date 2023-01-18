@@ -1,5 +1,5 @@
 // Environment variables 
-require('dotenv').config({}); 
+// require('dotenv').config({}); 
 
 // importing connecting to the database
 const connectToMongo = require('./db');
